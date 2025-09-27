@@ -1,42 +1,52 @@
-# Intro to Flask - Step 3: Dynamic Routes
+# Intro to Flask 
 
-Welcome to **Step 3**
+Welcome to the **Intro to Flask**  repository!  
 
-This step introduces:
-- Dynamic routes with URL variables (`/blog/<post_id>`)
+This repo is based on the live session - Intro to Flask, from creating 
+About creating your first flask app to adding dynamic routes and templates.
+
 ---
 
-## File Highlights
-- `app.py` contains routes for `/` (home), `/about`, and `/blog/<post_id>`.
-- HTML templates are in the `templates/` folder (`index.html`, `about.html`, `blog.html`).
-- Users can now type dynamic blog URLs directly in the browser.
+## Overview
 
-## Run the App
+The repository is split into **branches for each step**:
 
-1. Install dependencies:
+| Step | Branch | Content                                                |
+|------|--------|--------------------------------------------------------|
+| Step 1 | `step-1-setup` | Minimal Flask app with a basic home route              |
+| Step 2 | `step-2-static-pages` | Static routes and HTML templates (`/` and `/about`)    |
+| Step 3 | `step-3-dynamic-routes` | Dynamic routes using URL variables (`/blog/<post_id>`) |
 
+---
+
+## Getting Started
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/devmunro/intro-to-flask.git
+cd intro-to-flask
+pip install -r requirements.txt #pip3 for mac
 ```
-pip install -r requirements.txt
+
+2. Switch to the branch you want to explore
+
+```bash
+git checkout step-1-setup
+# or step-2-static-pages
+# or step-3-dynamic-routes
 ```
 
-2. Run the Flask app:
-    - *Option 1*
-      - python app.py # use python3 on Mac/Linux if needed
-    - *Option 2*
-      - flask --app app run --port 5050
-
-
-3. Open your browser and visit:
-http://localhost:5050/
-
-You should see a welcome message:
-"Welcome to my first Flask app!"
+3. Run the Flask app
+```bash
+python app.py
+#visit - http://localhost:5050/
+```
 
 
 ## Notes for Students
-- debug=True allows Flask to automatically reload the server when you save changes.
-- The default Flask port is 5000, but here we use 5050 to avoid conflicts.
-- You can optionally add host="0.0.0.0" to make the app accessible externally.
 
-- `render_template()` **by default looks in the `templates/` folder**, so Flask knows where to find your HTML files.
-- Dynamic routes allow you to pass variables from the URL into templates, e.g., /blog/<post_id> lets us show different posts based on post_id.
+- debug=True lets Flask reload the server automatically when you save changes.
+- Default Flask port is 5000; here we use 5050.
+- render_template() looks in the templates/ folder by default.
+- Official Flask documentation: https://flask.palletsprojects.com/en/stable/quickstart/
