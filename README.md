@@ -1,15 +1,15 @@
-# Intro to Flask - Step 2: Static Routes
+# Intro to Flask - Step 3: Dynamic Routes
 
-Welcome to **Step 2**
+Welcome to **Step 3**
 
 This step introduces:
-- Rendering HTML templates with Flask
-- Creating static pages (`/` and `/about`)
+- Dynamic routes with URL variables (`/blog/<post_id>`)
 ---
 
 ## File Highlights
-- `app.py` contains routes for `/` (home) and `/about`.
-- HTML templates are in the `templates/` folder (`index.html` and `about.html`).
+- `app.py` contains routes for `/` (home), `/about`, and `/blog/<post_id>`.
+- HTML templates are in the `templates/` folder (`index.html`, `about.html`, `blog.html`).
+- Users can now type dynamic blog URLs directly in the browser.
 
 ## Run the App
 
@@ -39,3 +39,4 @@ You should see a welcome message:
 - You can optionally add host="0.0.0.0" to make the app accessible externally.
 
 - `render_template()` **by default looks in the `templates/` folder**, so Flask knows where to find your HTML files.
+- Dynamic routes allow you to pass variables from the URL into templates, e.g., /blog/<post_id> lets us show different posts based on post_id.
