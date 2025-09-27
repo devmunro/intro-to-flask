@@ -1,9 +1,9 @@
-from flask import Flask
+"""
+Step 2: Static pages with templates.
+This app demonstrates rendering HTML templates using Flask.
+"""
 
-"""
-Step 1: Minimal Flask setup.
-This app demonstrates creating a Flask app and adding a basic home route.
-"""
+from flask import Flask, render_template
 
 # Create the Flask app instance
 app: Flask = Flask(__name__)
@@ -11,15 +11,23 @@ app: Flask = Flask(__name__)
 @app.route("/")
 def home_page() -> str:
     """
-    Render the home page with a welcome message.
+    Render the home page using index.html template.
 
     Returns:
-        str: Simple HTML content for the home page.
+        str: Rendered HTML template for the home page.
     """
-    return "<h1>Welcome to my first Flask app!</h1>"
+    return render_template("index.html")
+
+@app.route("/about")
+def about_page() -> str:
+    """
+    Render the about page using about.html template.
+
+    Returns:
+        str: Rendered HTML template for the about page.
+    """
+    return render_template("about.html")
 
 if __name__ == "__main__":
-    # debug=True - runs the Flask app in debug mode
-    # default port is 5000, but here we use 5050 to avoid conflicts
-    # you can also add host="0.0.0.0" to make it externally accessible
+    # Run the app in debug mode on port 5050
     app.run(debug=True, port=5050)
