@@ -1,12 +1,9 @@
 # Intro to Flask 
 
-Welcome to the **Intro to Flask**  repository!  
+Welcome to the **Intro to Flask** repository!  
+*This repo is based on the live session - Intro to Flask*
 
-This repo is based on the live session - Intro to Flask
-
-About creating your first flask app to adding dynamic routes and templates.
-
----
+  <img src="https://github.com/user-attachments/assets/e2219e85-1c49-4d60-8997-b521ee0e5ecb" width="1006" height="624" alt="image" />
 
 ## Overview
 
