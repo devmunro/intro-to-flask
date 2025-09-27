@@ -9,24 +9,20 @@ from flask import Flask, render_template
 app: Flask = Flask(__name__)
 
 @app.route("/")
-def home_page() -> str:
+def home_page():
     """
     Render the home page using index.html template.
-
-    Returns:
-        str: Rendered HTML template for the home page.
     """
     return render_template("index.html")
 
+
 @app.route("/about")
-def about_page() -> str:
+def about_page():
     """
     Render the about page using about.html template.
-
-    Returns:
-        str: Rendered HTML template for the about page.
     """
     return render_template("about.html")
+
 
 if __name__ == "__main__":
     # Run the app in debug mode on port 5050
