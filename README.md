@@ -2,7 +2,8 @@
 
 Welcome to the **Intro to Flask**  repository!  
 
-This repo is based on the live session - Intro to Flask, from creating 
+This repo is based on the live session - Intro to Flask
+
 About creating your first flask app to adding dynamic routes and templates.
 
 ---
