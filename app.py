@@ -1,22 +1,21 @@
-from flask import Flask
-
 """
 Step 1: Minimal Flask setup.
 This app demonstrates creating a Flask app and adding a basic home route.
 """
 
+from flask import Flask
+
 # Create the Flask app instance
 app: Flask = Flask(__name__)
 
+
 @app.route("/")
-def home_page() -> str:
+def home_page():
     """
     Render the home page with a welcome message.
-
-    Returns:
-        str: Simple HTML content for the home page.
     """
     return "<h1>Welcome to my first Flask app!</h1>"
+
 
 if __name__ == "__main__":
     # debug=True - runs the Flask app in debug mode
